@@ -32,8 +32,8 @@ abstract: |
   consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et
   accumsan et iusto odio dignissim qui blandit praesent luptatum zzril
   delenit augue duis dolore te feugait nulla facilisi.
-keywords: [template, demo]
-bibliography: template.bib
+keywords: "template, demo"
+bibliography: sample.bib
 teaser:
   image: CypressView
   caption: |

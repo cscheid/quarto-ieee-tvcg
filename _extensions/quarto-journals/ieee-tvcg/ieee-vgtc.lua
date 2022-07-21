@@ -56,20 +56,20 @@ return {
       end
 
       -- firstsection, title
-      print(replace_node(doc.blocks, function(el)
+      replace_node(doc.blocks, function(el)
           return el.t == "Header" and pandoc.utils.stringify(el.content) == "Introduction"
       end, pandoc.RawBlock(
         "latex", 
-        "\\firstsection{Introduction}\n\\maketitle")))    
+        "\\firstsection{Introduction}\n\\maketitle"))
 
       -- add bibliography to the right place
       -- local bibname = "sample-base"
       local bibliography = pandoc.RawBlock(
         "latex", 
         "\\bibliographystyle{abbrv-doi}\n\\bibliography{" .. bibname .. "}")
-      print(replace_node(doc.blocks, function(el)
+      replace_node(doc.blocks, function(el)
         return el.t == "Header" and pandoc.utils.stringify(el.content) == "References"
-      end, bibliography))
+      end, bibliography)
 
       -- fix acknowledgments
       --replace_node(doc.blocks, function(el)
